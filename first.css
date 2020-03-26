@@ -13,7 +13,7 @@ body {
 }
 .main-page {
   height: 100%;
-  background-image: url(../image/main.jpg);
+  background-image: url(img/main.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
