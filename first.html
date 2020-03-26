@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="first.css" />
+    <link rel="stylesheet" href="grid.css">
+  </head>
+  <body>
+  <!-- 로그인 폼 시작 -->
+  <div id="login" class="modal">
+  <form class="modal-content">
+  <div class="conta">
+  <span onclick="closeLogin();" class="close">&times;</span>
+  
+    <button class="facebook">
+        
+            <img src="img/facebook.svg" width="18px" height="18px" alt="">
+
+        페이스북 계정으로 로그인
+        </button>
+    
+    <button class="google">
+        
+            <img src="img/google.svg" width="18px" height="18px" alt="">
+        
+    구글 계정으로 로그인</button>
+    </div>
+  <hr>
+  
+  <div>
+  <button type="submit" class="loginbtn"><img src="img/email.svg" width="18px" height="18px" alt="">
+    이메일로 회원가입하기</button>
+    <br><br>
+    <hr>
+  <div class="p">
+  <p style="margin-left: 28px;">이미 에어비앤비 계정이 있나요?</p><a href="#" style="width: 70px; color: #008489;">로그인</a>
+</div>
+  <br>
+</div>
+  </div>
+  </form>
+  </div>
+  <!-- 로그인 폼 끝 -->
+  <script>
+  var login = document.getElementById('login');
+  function openLogin(){
+  login.style.display='block';
+  }
+  function closeLogin(){
+  login.style.display='none';
+}
+// 로그인 화면 바깥의 영역을 클릭할 경우 로그인 창 닫기
+window.onclick = function(event) {
+if (event.target == login) {
+login.style.display = "none";
+}
+}
+</script>
+<body>
+  
+    <!-- 조인 팝업창 시작 display:none -->
+   <div id="join-popup" class="join-popup">
+     <!-- 조인 윈도우창 시작 -->
+     <div class="join-window">
+     <div class="close-button">
+     <!-- 버튼내용 -->
+     </div>
+     <div class="fbook-login form">
+     <!-- 페이스북 계정 로그인 -->
+     <button class="facebook">
+        
+      <img src="img/facebook.svg" width="18px" height="18px" alt="">
+
+  페이스북 계정으로 로그인
+  </button>
+     </div>
+     <div class="google-login form">
+     <!-- 구글 계정 로그인 -->
+     <button class="google" >
+        
+      <img src="img/google.svg" width="18px" height="18px" alt="">
+  
+구글 계정으로 로그인</button>
+     </div>
+     <div class="line-combo">
+     <div class="line-left"></div><span>또는</span><div class="line-right"></div>
+     </div>
+     
+  <input type="text" class="text_input" placeholder="이메일 주소">
+  <input type="password" class="text_input" placeholder="비밀번호">
+  <label>
+    <input type="checkbox" checked="checked" style="margin-bottom:15px"> 비밀번호 저장
+    </label>
+    <button type="submit" class="loginbtn">
+      로그인</button>
+     </div>
+     <!-- 조인 윈도우창 끝 -->
+     </div>
+     <!-- 조인 팝업창 끝 -->
+     <script>
+     var join_popup = document.getElementById('join-popup');
+     function join_close(){
+       join_popup.style.display = 'none';
+     }
+   function join_open(){
+   join_popup.style.display = 'block';
+   }
+   window.onclick = function(event) {
+if (event.target == join_popup) {
+join_popup.style.display = "none";
+}
+}
+   </script>
+    <header id="main-page" class="main-page">
+      <!-- 네비게이션 메뉴 시작 -->
+      <nav class="main-navi">
+        <div class="logo">
+          <img src="../image/logo.svg" width="34px" height="34px" alt="logo" />
+        </div>
+        <div class="item">
+          <a href="#">한국어(KR)</a>
+          <a href="#">₩ KRW</a>
+          <a href="#">숙소 호스팅</a>
+          <a href="#">체험 호스팅</a>
+          <a href="#">도움말</a>
+          <a onclick="openLogin();" href="#">회원 가입</a>
+          <a onclick="join_open();" href="#">로그인</a>
+        </div>
+      </nav>
+      <!-- 네비게이션 메뉴 끝 -->
+
+      <div class="main-form">
+        <div>
+          <h1
+            style="font-size: 30px;height: 72; color: inherit;text-decoration: none;"
+          >
+            특색 있는
+            <a
+              href="/naver.com"
+              style="color: inherit; cursor: pointer; text-decoration: none;"
+              >숙소</a
+            >와 즐길<br />
+            거리를 예약하세요.
+          </h1>
+          <br />
+          <label style="font-size: 12px; font-weight: bold; ">
+            목적지
+          </label>
+          <br />
+          <input type="text" class="ahrwjrwl" placeholder="모든 위치" /><br />
+          <div class="abbox">
+            <div class="box">
+              <label style="font-size: 12px;font-weight: bold;">
+                체크인
+              </label>
+              <br />
+              <input type="text" class="susdnjfdlf" placeholder="년. 월. 일." />
+            </div>
+            <div class="box">
+              <label style="font-size: 12px;font-weight: bold;">
+                체크아웃
+              </label>
+              <br />
+              <input
+                type="text"
+                class="susdnjfdlf"
+                placeholder="년. 월. 일."
+              /><br />
+            </div>
+          </div>
+          <label style="font-size: 12px; font-weight: bold; "> 인원 </label
+          ><br />
+          <select class="ahrwjrwl" name="humans">
+            <option value="">인원</option>
+            <option value="">성인</option>
+            <option value="">어린이</option>
+            <option value="">유아</option>
+          </select>
+        </div>
+        <button class="btn">검색</button>
+      </div>
+      <div class="corona-form">
+        <div class="cotext1">
+          코로나19 사태에 대한 에어비앤비의 대응
+        </div>
+        <br>
+        <div class="cotext2">
+          에어비앤비는 2020년 3월 14일 까지 예약을 마쳤으며 체크인 날짜가 2020년 4월 14일 이전인 예약건에 대해, 게스트에게는 예약금 전액 환불을, 호스트에게는 수수료 없는 취소 옵션을 제공하고 있습니다. 이 정책은 신규 예약에는 적용되지 않습니다.
+        </div>
+        <br>
+        <div class="cotext3">자세히 알아보기</div>
+      </div>
+      <div class="bottom-text">
+        <br><br><br><br><br><br><br><br><br><br><br>오리건에 있는 300개 이상의 <br>독특한 숙소
+      </div>
+    </header>
+    <section id="world-home">
+      <br><br><br>
+      <h3>에어비앤비 둘러보기</h3>
+      <div class="three">
+        <div class="box" style="box-shadow: 5px 5px grey;border-radius: 20%;height: 100px;">
+          <img src="../image/tnrqkr.jpg" style="border-radius: 20%;" width="150px" height="100px"  alt="1">
+          <label>숙소</label>
+        </div>
+        <div class="box" style="border-radius: 20%;height: 100px;box-shadow: 5px 5px grey;">
+          <img src="../image/cpgja.jpg" style="border-radius: 20%;" width="150px" height="100px"  alt="1">
+        </div>
+        <div class="box" style="border-radius: 20%;height: 100px;box-shadow: 5px 5px grey;">
+          <img src="../image/adv.jpg" style="border-radius: 20%;" width="150px" height="100px"  alt="1">
+        </div>
+      </div>
+      <br><br><br>
+      <h3>에어비앤비 플러스 숙소</h3>
+      <img src="../image/title.jpg" width="1700px" height="300px" style="border-radius: 3%;" alt="1">
+      <br><br><br>
+      <h3>에어비앤비 어드벤처를 소개합니다.</h3>
+      <p>현지 전문가가 진행하는 2일 이상의 여행 - 액티비티,식사,숙박 포함.</p><br>
+      <div class="picture">
+          <div class="box">
+            <img src="../image/ad1.jpg" width="258px" height="300px" alt="1">
+            <label class="text_8">OTHER(TZ)</label>
+            <label class="text_8">Chimpanzee Trekking in Gombe</label>
+            <label class="text_8">1인당 ￦822,780부터·3일</label>
+          </div>
+          <div class="box">
+            <img src="../image/ad2.jpg" width="258px" height="300px" alt="2">
+            <label class="text_8">RUSSIAN FEDERATION</label>
+            <LAbel class="text_8">Окунитесь в настоящую сельскую жизнь</LAbel>
+            <label class="text_8">1인당 ￦99,773부터·2일</label>
+          </div>
+          <div class="box">
+            <img src="../image/ad3.jpg" width="258px" height="300px" alt="3">
+            <label class="text_8">캐나다</label>
+            <label class="text_8">브리티시컬럼비아에서 반짝반짝 빛을 내는 바닷속 생물을 만나세요</label>
+            <label class="text_8">1인당 ￦234,173부터·2일★4.77</label><label style="color: grey;">(56)</label>
+          </div>
+          <div class="box">
+            <img src="../image/ad4.jpg" width="258px" height="300px" alt="4">
+            <label class="text_8">OTHER(US)</label>
+            <label class="text_8">Stargazing and camping in Death Valley</label>
+            <label class="text_8">1인당 ￦411,391부터·2일</label>
+          </div>
+          <div class="box">
+            <img src="../image/ad5.jpg" width="258px" height="300px" alt="5">
+            <label class="text_8">브라질</label>
+            <label class="text_8">산 정상에서 즐기는 캠핑!</label>
+            <label class="text_8">1인당 ￦93,612부터·2일★5.0</label>
+            <label style="color: grey;">(56)</label>
+          </div>
+          <div class="box">
+            <img src="../image/ad6.jpg" width="258px" height="300px" alt="6">
+            <label class="text_8">코지코드</label>
+            <label class="text_8">Food&Faith in southwesternIndia</label>
+            <label class="text_8">1인당 ￦6,613,886부터·10일</label>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top: 50px; font-size: 15px; font-weight: bold;"><U>어드벤처 모두보기</U> > </p>
+      <br>
+      <br>
+      <br>
+      <h3>전세계 숙소</h3>
+      <div class="container">
+        <div class="box">
+          <img src="../image/1.jpg" width="400px" height="200px" alt="1" /><br>
+          <span class="text_2">Plus</span>
+          <label type="text" class="text_1">인도네시아</label>
+          <span class="text_3">★</span>
+          <span>4.90</span><br>
+          <label type="text" class="text_5" >Dutch Architecture Villa with Private Pool</label>
+        </div>
+        <div class="box">
+          <img src="../image/2.jpg" width="400px" height="200px" alt="2" /><br>
+          <span class="text_6">슈퍼호스트</span>
+          <label type="text" class="text_8">포르투갈</label>
+          <span class="text_7">★</span>
+          <span>4.95</span><br>
+          <label type="text" class="text_5"  >Douro Villa with swimming pool, Penafiel, Portugal</label>
+        </div>
+        <div class="box">
+          <img src="../image/3.jpg" width="400px" height="200px" alt="3" /><br>
+          <span class="text_6">슈퍼호스트</span>
+          <label type="text" class="text_8" >아이슬란드</label>
+          <span class="text_7">★</span>
+          <span>4.76</span><br>
+          <label type="text" class="text_5"  >A BEAUTIFUL LUXURY VILLA IN NORTH ICELAND</label>
+        </div>
+        <div class="box">
+          <img src="../image/4.jpg" width="400px" height="200px" alt="4" /><br>
+          <span class="text_6">슈퍼호스트</span>
+          <label type="text" class="text_8" >일본</label>
+          <span class="text_7">★</span>
+          <span>4.94</span><br>
+          <label type="text" class="text_5"  >Sanson Terrace "off-grid tinycottage"</label>
+        </div>
+        <div class="box">
+          <img src="../image/5.jpg" width="400px" height="200px" alt="5" /><br>
+          <span class="text_6">슈퍼호스트</span>
+          <label type="text" class="text_8" >아이슬란드</label>
+          <span class="text_7">★</span>
+          <span>4.76</span><br>
+          <label type="text" class="text_5"  >Amazing view - Moderne apartment</label>
+        </div>
+        <div class="box">
+          <img src="../image/6.jpg" width="400px" height="200px" alt="6" /><br>
+          <span class="text_6">슈퍼호스트</span>
+          <label type="text" class="text_8" >프랑스</label>
+          <span class="text_7">★</span>
+          <span>4.90</span><br>
+          <label type="text" class="text_5"  >Superb duplex apartment in the historical centre</label>
+        </div>
+        <div class="box">
+          <img src="../image/7.jpg" width="400px" height="200px" alt="7" /><br>
+          <span class="text_6">슈퍼호스트</span>
+          <label type="text" class="text_8" >크로아티아</label>
+          <span class="text_7">★</span>
+          <span>4.78</span><br>
+          <label type="text" class="text_5"  >The best position in Hvart!</label>
+        </div>
+        <div class="box">
+          <img src="../image/8.jpg" width="400px" height="200px" alt="8" /><br>
+          <span class="text_6">슈퍼호스트</span>
+          <label type="text" class="text_8" >그리스</label>
+          <span class="text_7">★</span>
+          <span>4.95</span><br>
+          <label type="text" class="text_5"  >Hector Cave House</label>
+        </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

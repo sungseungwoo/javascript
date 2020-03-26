@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="a.css">
+</head>
+<body>
+  <h2>로그인 폼</h2>
+  <button onclick="openLogin();" style="width:auto;">로그인</button>
+  <!-- 로그인 폼 시작 -->
+  <div id="login" class="modal">
+  <form class="modal-content">
+  <div class="container">
+  <span onclick="closeLogin();" class="close">&times;</span>
+  <div>
+    <button class="facebook">
+        <div>
+            <img src="img/facebook.svg" width="18px" height="18px" alt="">
+
+        <div>페이스북 계정으로 로그인</div>
+        </button></div>
+    </button>
+    <button class="google">
+        <div>
+            <img src="img/google.svg" width="18px" height="18px" alt="">
+        </div>
+    <div>구글 계정으로 로그인</div></button>
+    </div>
+  <hr>
+<div>
+  <input type="text" class="text_input" placeholder="이메일 주소">
+<img src="" alt="">
+</div>
+  <input type="password" class="text_input" placeholder="비밀번호">
+  <label>
+  <input type="checkbox" checked="checked" style="margin-bottom:15px"> 비밀번호 저장
+  </label>
+  <div>
+  <button type="submit" class="loginBtn">로그인</button>
+  <hr>
+  <p>에어비앤비 계정이 없으세요?</p>
+</div>
+  </div>
+  </form>
+  </div>
+  <!-- 로그인 폼 끝 -->
+  <script>
+  var login = document.getElementById('login');
+  function openLogin(){
+  login.style.display='block';
+  }
+  function closeLogin(){
+  login.style.display='none';
+}
+// 로그인 화면 바깥의 영역을 클릭할 경우 로그인 창 닫기
+window.onclick = function(event) {
+if (event.target == login) {
+login.style.display = "none";
+}
+}
+</script>
+<body>
+    <!-- 조인 팝업창 시작 display:none -->
+   <div id="join-popup" class="join-popup">
+     <!-- 조인 윈도우창 시작 -->
+     <div class="join-window">
+     <div class="close-button">
+     <!-- 버튼내용 -->
+     </div>
+     <div class="fbook-login form">
+     <!-- 페이스북 계정 로그인 -->
+     </div>
+     <div class="google-login form">
+     <!-- 구글 계정 로그인 -->
+     </div>
+     <div class="line-combo">
+     <!-- -----또는----- -->
+     </div>
+     </div>
+     <!-- 조인 윈도우창 끝 -->
+     </div>
+     <!-- 조인 팝업창 끝 -->
+     <button onclick="">오픈</button>
+     <script>
+     var join_popup = document.getElementById('join-popup');
+     function join_close(){
+       join_popup.style.display = 'none';
+     }
+   function join_open(){
+   join_popup.style.display = 'block';
+   }
+   </script>
+   
+</body>
+</html>

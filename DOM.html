@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM검색 getElementById, querySelectorAll</title>
+</head>
+<body>
+  <h3>DOM검색 getElementById, querySelectorAll</h3>
+  <div id="eID">
+    <div class="eClass">Elment1</div>
+    <div class="eClass">Elment2</div>
+    <div class="eClass">Elment3</div>
+    <div class="eClass">Elment4</div>
+    <div class="eClass">Elment5</div>
+    <div class="eClass">Elment6</div>
+    <div class="eClass">Elment7</div>
+  </div>
+
+    <script>
+      var eID = document.getElementById('eID');
+      eID.style.background = 'grey';
+
+      var color = ['rgb(255,0,0)','rgb(255,50,0)','rgb(255,255,0','rgb(0,255,0','rgb(0,0,255)','rgb(0,5,255)','rgb(100,0,255)'];
+    var eClass = document.querySelectorAll('.eClass');  
+    console.log(eClass);
+    for(var i = 0; i<eClass.length; i++){
+    eClass[i].style.color = color[i];
+    }
+    </script>
+</body>
+</html>

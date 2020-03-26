@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타이머 함수</title>
+</head>
+<body>
+  <script>
+    // var timerID = setTimeout(function(){
+    //   alert('1초 간격')
+    //   document.write("한번실행됐음")
+    // }, 1000);
+
+    // setTimeout(function(){
+    //   clearInterval(timerID);
+      
+    // }, 5000)
+
+    var intervalID = setTimeout(function(){
+      alert('1초 간격')
+    }, 1000);
+
+    setTimeout(function(){
+      clearInterval(intervalID);
+    }, 5000);
+  </script>
+</body>
+</html>

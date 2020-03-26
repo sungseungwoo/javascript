@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>excall</title>
+</head>
+<body>
+  <script>
+    function ask(question, yes, no) {
+      if (confirm(question)) yes()
+      else no();
+    }
+    function yes(){
+      alert("동의했습니다.");
+    }
+    function no() {
+      alert("취소했습니다!");
+    }
+
+    ask('동의하세요?', yes, no);
+  </script>
+</body>
+</html>

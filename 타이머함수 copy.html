@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타이머 함수</title>
+</head>
+<body>
+  <h3>함수</h3>
+  <script>
+    // function printTen(x){
+    //   alert(10);
+    // }
+  // </script>
+  // <h3>익명 함수</h3>
+  // <script>
+  //   var pulsTen = function(){
+  //     var num = prompt("숫자를 입력해줏요","0");
+  //     alert(number(num)+10);
+  //   }
+  //   alert(typeof(pulsTen));
+
+  //   pulsTen();
+  //   var add = pulsTen
+
+  //   add();
+  // </script>
+
+<script>
+  function func(callback){
+    alert(typeof(callback));
+    callback();
+  }
+  function myCall(){
+    alert('myCall 호출');
+  }
+
+  func(myCall);
+</script>
+</body>
+</html>

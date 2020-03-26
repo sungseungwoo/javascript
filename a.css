@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+/* 텍스트상자 */
+.text_input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: white;
+  border: 2px solid #f1f1f1;
+}
+
+/* 버튼 스타일*/
+button {
+  background-color: #ff5a5f;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.facebook {
+  background-color: #4568b2;
+  font-weight: bold;
+  font-size: 18px;
+}
+.google {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  font-size: 18px;
+}
+
+.container {
+  padding: 10px 16px;
+}
+img {
+  width: 18;
+}
+/* 배경화면(로그인창 바깥) */
+.modal {
+  display: none; /* 기본 안보이도록 */
+  position: fixed; /* 포지션 픽스 */
+  left: 0;
+  top: 0;
+  width: 100%; /* 가로길이 */
+  height: 100%; /* 세로높이 */
+  overflow: auto; /* 필요하면 스크롤 가능 */
+  background-color: #474e5d;
+}
+.modal {
+  display: none; /* 기본 안보이도록 */
+  position: fixed; /* 포지션 픽스 */
+  left: 0;
+  top: 0;
+  width: 100%; /* 가로길이 */
+  height: 100%; /* 세로높이 */
+  overflow: auto; /* 필요하면 스크롤 가능 */
+  background-color: #474e5d;
+}
+
+/* 로그인창 */
+.modal-content {
+  background-color: #fefefe;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* 종료버튼 (x) */
+.close {
+  float: left;
+  font-size: 40px;
+  color: rgb(118, 118, 118);
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}

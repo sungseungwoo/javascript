@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blur 필터</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .bg-image {
+        background-image: url(../image/photo.jpg);
+        filter: blur(8px);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bg-text {
+        width: 80%;
+        background-color: rgba(0, 0, 0, 0.4);
+        /* rgba 투명도 */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        /* 화면 가운데 위치 */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 백그라운드 이미지 -->
+    <div class="bg-image"></div>
+    <div class="bg-text">
+      <h2>Blurred Background</h2>
+      <h1 style="font-size: 50px;">I am John Doe</h1>
+      <p>And I am Photographer</p>
+    </div>
+  </body>
+</html>
